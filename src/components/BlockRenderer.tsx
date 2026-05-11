@@ -36,8 +36,12 @@ export const BlockRenderer: React.FC<BlockRendererProps> = ({ blocks }) => {
 const renderBlock = (block: Block) => {
   switch (block.type) {
     case 'heading':
-      const Tag = `h${block.level}` as keyof JSX.IntrinsicElements;
-      return <Tag className="text-3xl font-bold font-orbitron my-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">{block.text}</Tag>;
+      const headingClass = "text-3xl font-bold font-orbitron my-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent";
+      switch (block.level) {
+        case 1: return <h1 className={headingClass}>{block.text}</h1>;
+        case 3: return <h3 className={headingClass}>{block.text}</h3>;
+        default: return <h2 className={headingClass}>{block.text}</h2>;
+      }
     case 'text':
       return <p className="text-lg text-slate-300 leading-relaxed whitespace-pre-wrap">{block.content}</p>;
     case 'code':

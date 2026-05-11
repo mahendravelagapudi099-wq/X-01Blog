@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion, useScroll, useSpring } from 'framer-motion';
-import { ArrowLeft, Calendar, Clock, Share2, Tag, Bookmark, Github, Twitter } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, Share2, Bookmark, Globe } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import { BlockRenderer } from '@/components/BlockRenderer';
 import type { Block } from '@/components/BlockRenderer';
@@ -112,8 +112,8 @@ const PostPage = () => {
                 Full-stack developer and AI enthusiast exploring the future of computing. Always building, always learning.
               </p>
               <div className="flex justify-center md:justify-start gap-4">
-                <button className="text-slate-400 hover:text-white transition-colors"><Github className="h-5 w-5" /></button>
-                <button className="text-slate-400 hover:text-white transition-colors"><Twitter className="h-5 w-5" /></button>
+                <button className="text-slate-400 hover:text-white transition-colors"><Globe className="h-5 w-5" /></button>
+                <button className="text-slate-400 hover:text-white transition-colors"><Globe className="h-5 w-5" /></button>
               </div>
             </div>
           </div>
