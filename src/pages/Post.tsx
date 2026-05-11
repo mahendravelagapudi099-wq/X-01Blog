@@ -3,7 +3,8 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock, Share2, Tag, Bookmark, Github, Twitter } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
-import { BlockRenderer, Block } from '@/components/BlockRenderer';
+import { BlockRenderer } from '@/components/BlockRenderer';
+import type { Block } from '@/components/BlockRenderer';
 import { Helmet } from 'react-helmet-async';
 
 interface Post {
